@@ -1,0 +1,21 @@
+FROM alpine:3.7
+
+
+RUN  wget -O - https://bootstrap.saltstack.com | sudo sh &&
+
+
+
+
+#WORKDIR ${NODE_APP_FOLDER}
+
+#ARG USE_S3_BUCKET
+#ARG ENV_LIST
+#ARG AWS_ACCESS_KEY_ID_STAGE
+#ARG AWS_SECRET_ACCESS_KEY_STAGE
+#ARG S3_BUCKET_STAGE
+
+#COPY . .
+
+#RUN npm install -g nodemon && npm install && cd feature-flag-updater && npm install && cd ..
+
+#CMD ["tar", "-c", "certs", "node_modules", "public", "src", "package.json", "Dockerfile", "container/root/etc/services.d/node/run", "container/root/etc/cont-init.d/07-setup.sh", "sha.txt"]

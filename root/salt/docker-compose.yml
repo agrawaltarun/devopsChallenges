@@ -1,0 +1,15 @@
+version: '2'
+services:
+  salt-master:
+    image: ubuntu:latest
+    container_name: salt-master
+    build:  SaltMaster_DockerFile
+    ports:
+      - "443:443"
+      - "80:80"
+    environment:
+      - HOSTNAME=salt
+      - ABC=123
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    restart: on-failure

@@ -1,9 +1,11 @@
-version: '2'
+version: '3'
 services:
   salt-master:
     image: ubuntu:latest
     container_name: salt-master
-    build:  SaltMaster_DockerFile
+    build:
+      context: ./
+      dockerfile: SaltMaster_DockerFile
     ports:
       - "443:443"
       - "80:80"
